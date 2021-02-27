@@ -158,4 +158,60 @@ public class Student {
     private void setGrade(String grade) {
         this.grade = grade;
     }
+
+    public void calculateTotalMarks()
+    {
+        float total = 0.0f;
+        for(int i=0; i<marks.length;i++)
+        {
+            total += i;
+        }
+        setTotalMarks(total);
+    }
+
+    public void calculatePercentage()
+    {
+        float percent = this.totalMarks / marks.length;
+        setPercentage(percent);
+    }
+
+    public void calculateGrade()
+    {
+        String gr = new String();
+        if(this.percentage >= 94)
+        {
+            gr = "A+";
+        }
+        else if(this.percentage > 87)
+        {
+            gr = "A";
+        }
+        else if(this.percentage >= 80)
+        {
+            gr = "A-";
+        }
+        else if(this.percentage >= 70)
+        {
+            gr = "B";
+        }
+        else if(this.percentage >= 60)
+        {
+            gr = "C";
+        }
+        else if(this.percentage >= 50)
+        {
+            gr = "D";
+        }
+        else if(this.percentage >= 45)
+        {
+            gr = "E";
+        }
+        else {
+            gr = "F";
+
+        }
+
+        setGrade(gr);
+    }
+
 }
