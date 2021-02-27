@@ -164,7 +164,7 @@ public class Student {
         float total = 0.0f;
         for(int i=0; i<marks.length;i++)
         {
-            total += i;
+            total += marks[i];
         }
         setTotalMarks(total);
     }
